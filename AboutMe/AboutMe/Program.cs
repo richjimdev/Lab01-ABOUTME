@@ -11,7 +11,7 @@ namespace AboutMe
 
             Console.WriteLine("Do I prefer dogs or cats?");
             string ans1 = Console.ReadLine();
-            Console.WriteLine(DogsCats(ans1));
+            Console.WriteLine(AnswerCheck(ans1));
             
             Console.WriteLine("How old am I?");
             try
@@ -29,6 +29,9 @@ namespace AboutMe
             Console.WriteLine($"That is {MyHair(ans3)}");
 
             Console.WriteLine("What Color is my car?");
+            string ans4 = Console.ReadLine();
+            Console.WriteLine(AnswerCheck(ans4));
+
 
 
 
@@ -48,9 +51,9 @@ namespace AboutMe
 
         }
 
-        static string DogsCats (string ans)
+        static string AnswerCheck (string ans)
         {
-            if (ans == "dogs")
+            if (ans == "dogs" || ans == "blue")
             {
                 return "Correct";
             }
