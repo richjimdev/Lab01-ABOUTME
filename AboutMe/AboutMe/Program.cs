@@ -7,6 +7,7 @@ namespace AboutMe
         static void Main(string[] args)
         {
             Console.WriteLine("Let's play a game. Try to guess some things about me.");
+            
 
             Console.WriteLine("Do I prefer dogs or cats?");
             string ans1 = Console.ReadLine();
@@ -22,6 +23,13 @@ namespace AboutMe
             {
                 Console.WriteLine("Wrong! That's not a number");
             }
+
+            Console.WriteLine("Is my hair blonde? Yes or No.");
+            string ans3 = Console.ReadLine();
+            Console.WriteLine($"That is {MyHair(ans3)}");
+
+            Console.WriteLine("What Color is my car?");
+
 
 
             // dogs or cats? 
@@ -43,7 +51,9 @@ namespace AboutMe
         static string DogsCats (string ans)
         {
             if (ans == "dogs")
+            {
                 return "Correct";
+            }
             else
                 return "Incorrect";
         }
@@ -51,18 +61,22 @@ namespace AboutMe
         static void MyAge (int guess)
         {
             if (guess == 28)
-            {
                 Console.WriteLine("Impressive, correct on the first guess!");
-            }
             else
-            {
                 Console.WriteLine($"Incorrect, the answer was 28. Your guess was {AgeDifference(guess)} years off.");
-            }
         }
 
         static int AgeDifference (int ans)
         {
                 return Math.Abs(ans - 28);
+        }
+
+        static bool MyHair (string ans)
+        {
+            if (ans == "yes")
+                return false;
+            else
+                return true;
         }
         
     }
